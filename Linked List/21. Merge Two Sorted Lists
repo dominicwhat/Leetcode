@@ -1,0 +1,36 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def mergeTwoLists(self, list1, list2):
+        """
+        :type list1: Optional[ListNode]
+        :type list2: Optional[ListNode]
+        :rtype: Optional[ListNode]
+        """
+        prev = ListNode()
+        dummy = prev
+
+        while list1 and list2:
+            if list1.val <= list2.val: 
+                prev.next = list1
+                list1 = list1.next
+            else:
+                prev.next = list2
+                list2 = list2.next
+
+            prev = prev.next
+
+        if list1:
+            prev.next = list1
+        if list2:
+            prev.next = list2
+        
+        return dummy.next
+
+# linked list 有val儲存資料結構的值，也有next指向下一個節點
+# 比較list1和list2的值，是比較list1.val v.s. list2.val 而非list1 v.s. list2
+
+https://leetcode.com/problems/merge-two-sorted-lists/
