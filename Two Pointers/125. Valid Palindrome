@@ -1,0 +1,37 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """            
+        l ,r = 0, len(s) - 1
+        while l <= r :
+            while not s[l].isalnum() and l < r:
+                l += 1
+            while not s[r].isalnum() and r > l:
+                r -= 1
+            if s[l].lower() == s[r].lower():
+                l+=1
+                r-=1
+            else:
+                return False
+        return True
+
+        # 以下解法沒有考慮palindrome長度奇偶性      
+        # stack = []
+        # for i in s:
+        #     if not i.isalnum():
+        #         continue
+        #     if stack:
+        #         print(i.lower())
+        #         if i.lower() == stack[-1]:
+        #             print(2)
+        #             stack.pop()
+        #             continue
+        #     stack.append(i.lower())
+        # print(stack)
+        # if stack:
+        #     return False
+        # return True
+  
+      
