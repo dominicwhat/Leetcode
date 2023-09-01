@@ -13,3 +13,5 @@ class Solution(object):
 
 # min_price初始化要是prices[0](股票的第一個價格) 而非 0， 不然min_price再迴圈會永遠是0
 # min_price的更新在ans更新前或後都可以，原因不難想
+
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
