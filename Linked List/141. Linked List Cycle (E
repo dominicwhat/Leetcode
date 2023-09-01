@@ -1,0 +1,25 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        slow, fast = head, head
+
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                return True
+        return False
+
+# 寫while迴圈的時候要確保條件判斷式的fast, fast.next都成立，才能讓while迴圈裡的fast.next.next執行成功。
+# while迴圈裡的條件其中一個成立就不會報錯。e.g. 當fast = None， while fast.next 會報錯，但 while fast and fast.next 不會報錯。
+
+https://leetcode.com/problems/linked-list-cycle/description/
