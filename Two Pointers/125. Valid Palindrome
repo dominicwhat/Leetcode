@@ -17,7 +17,7 @@ class Solution(object):
                 return False
         return True
 
-        # 以下解法沒有考慮palindrome長度奇偶性      
+        # 以下解法沒有考慮palindrome長度奇偶性, 為錯誤解     
         # stack = []
         # for i in s:
         #     if not i.isalnum():
