@@ -16,3 +16,7 @@ class Solution(object):
             else:
                 return mid
         return -1
+
+# "mid" should be placed inside a for loop.
+
+# https://leetcode.com/problems/binary-search/
