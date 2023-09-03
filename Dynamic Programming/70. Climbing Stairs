@@ -16,6 +16,7 @@ class Solution(object):
         return dp[-1]
         
 
+# To avoid confusion regarding whether the for loop index indicates n-1 or n steps, you can use the following expression:
         # if n == 1:
         #     return 1
         # if n == 2: 
@@ -26,7 +27,5 @@ class Solution(object):
         #     dp.append(dp[i-1] + dp[i-2])
         
         # return dp[-1]
-
-#
 
 # https://leetcode.com/problems/climbing-stairs/description/
