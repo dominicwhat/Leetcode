@@ -30,7 +30,7 @@ class Solution(object):
 
 # Follow-up:
 # 1. Is it possible to interchange the rows and columns in dp for amount and coins?
-# 2. How can we redesign the solution using one-dimensional dp and reduce the space complexity to O(N+1), where N is the total number of coins? (implementing rolling optimization)
+# 2. How can we redesign the solution using one-dimensional dp and reduce the space complexity to O(N+1), where N is the total number of coins? (implementing scrolling array)
 # 3. How can we solve the problem using a recursive approach along with caching?
 
 # https://leetcode.com/problems/coin-change-ii/description/
