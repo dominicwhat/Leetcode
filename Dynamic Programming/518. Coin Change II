@@ -22,6 +22,10 @@ class Solution(object):
 # Initialize dp. If amount = 0, then set dp[0][j] = 1. Conversely, if coin = 0, then set dp[i][j] = 0.
 # The inner list represents columns, while the outer list represents rows.
 
-#
+# For the j-th coin, we consider its value as coins[j-1] rather than coins[j].
+
+# State transition equation: 
+# dp[i][j] = dp[i][j-1] + dp[i-coins[j-1]][j], i-coins[j-1] >= 0
+# dp[i][j] = dp[i][j-1], o.w.
 
 # https://leetcode.com/problems/coin-change-ii/description/
