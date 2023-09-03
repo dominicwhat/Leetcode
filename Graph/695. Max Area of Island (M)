@@ -21,7 +21,10 @@ class Solution(object):
                     res = max(res, dfs(i, j))
         return res
 
-# 
-# 
+# grid[r][c] == 0 should be placed at the end of the conditional statement, not at the beginning, to prevent an "IndexError: list index out of range" error. 
+# For example, it should be written as "if(r < 0 or r >= ROW or c < 0 or c >= COL or grid[r][c] == 0)" rather than "if(grid[r][c] == 0 or r < 0 or r >= ROW or c < 0 or c >= COL)".
+
+# The areas covered by dfs(r+1, c), dfs(r-1, c), dfs(r, c+1), and dfs(r, c-1) will not be double-counted because when grid[r][c] = 1 and is counted once, it is then set to grid[r][c] = 0. 
+# When it is encountered again, it will enter the conditional check and return 0.
 
 # https://leetcode.com/problems/max-area-of-island/description/
