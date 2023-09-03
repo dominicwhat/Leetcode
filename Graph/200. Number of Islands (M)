@@ -1,0 +1,30 @@
+class Solution(object):
+    def numIslands(self, grid):
+        """
+        :type grid: List[List[str]]
+        :rtype: int
+        """
+        num_islands = 0
+        row = len(grid)
+        col = len(grid[0])
+        
+        def dfs(r, c):
+            if (r < 0 or r >= row or c < 0 or c >= col or grid[r][c] == '0'):
+                return 
+            grid[r][c] = '0'
+            dfs(r + 1, c)
+            dfs(r - 1, c)
+            dfs(r, c + 1)
+            dfs(r, c - 1)
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] != '0':
+                    dfs(i, j)
+                    num_islands += 1
+        
+        return num_islands
+
+# The values of elements in the grid are strings instead of numbers, and the conditional statements should be written as '0' and '1' instead of 0 and 1.
+# The termination condition for DFS is >= len(grid), not > len(grid).
+
+# https://leetcode.com/problems/number-of-islands/description/
