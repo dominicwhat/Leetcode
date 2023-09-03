@@ -16,6 +16,12 @@ class Solution(object):
 
         return dp[-1][-1]  
 
-# 
+
+# dp = [[0 if i!=0 else 1 for j in range(len(coins) + 1)] for i in range(amount+1)]
+# dp[i][j], where i represents the amount, and j represents whether the first j coins are included or not, signifies the minimum number of coins from the set 1 to j required to reach the amount i.
+# Initialize dp. If amount = 0, then set dp[0][j] = 1. Conversely, if coin = 0, then set dp[i][j] = 0.
+# The inner list represents columns, while the outer list represents rows.
+
+#
 
 # https://leetcode.com/problems/coin-change-ii/description/
