@@ -5,19 +5,19 @@ class Solution(object):
         :rtype: int
         """
         num_islands = 0
-        row = len(grid)
-        col = len(grid[0])
+        ROW = len(grid)
+        COL = len(grid[0])
         
         def dfs(r, c):
-            if (r < 0 or r >= row or c < 0 or c >= col or grid[r][c] == '0'):
+            if (r < 0 or r >= ROW or c < 0 or c >= COL or grid[r][c] == '0'):
                 return 
             grid[r][c] = '0'
             dfs(r + 1, c)
             dfs(r - 1, c)
             dfs(r, c + 1)
             dfs(r, c - 1)
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
+        for i in range(ROW):
+            for j in range(COL):
                 if grid[i][j] != '0':
                     dfs(i, j)
                     num_islands += 1
