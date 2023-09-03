@@ -28,4 +28,9 @@ class Solution(object):
 # dp[i][j] = dp[i][j-1] + dp[i-coins[j-1]][j], i-coins[j-1] >= 0
 # dp[i][j] = dp[i][j-1], o.w.
 
+# Follow-up:
+# 1. Is it possible to interchange the rows and columns in dp for amount and coins?
+# 2. How can we redesign the solution using one-dimensional dp and reduce the space complexity to O(N+1), where N is the total number of coins? (implementing rolling optimization)
+# 3. How can we solve the problem using a recursive approach along with caching?
+
 # https://leetcode.com/problems/coin-change-ii/description/
