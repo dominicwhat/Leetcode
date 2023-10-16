@@ -1,0 +1,22 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> s;
+
+        for(int i = 0; i < nums.size(); i++){
+            if (s.find(nums[i]) != s.end()){
+                return true;
+            }
+            s.insert(nums[i]);
+        }
+        return false;
+    }
+};
+
+# In the provided code, the s.find(nums[i]) function is used to search for the existence of the element nums[i] in the unordered_set. 
+# If the iterator returned by s.find(nums[i]) is equal to s.end(), it means that the element nums[i] was not found in the unordered_set 
+# because s.end() points to the end of the container, which is a position where there is no element.
+
+#
+
+# https://leetcode.com/problems/contains-duplicate/
