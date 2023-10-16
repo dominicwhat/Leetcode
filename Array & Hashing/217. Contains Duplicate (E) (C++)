@@ -18,5 +18,7 @@ public:
 # because s.end() points to the end of the container, which is a position where there is no element.
 
 #
+The average time complexity of the insert operation in an unordered_set is O(1), indicating that its performance is typically very efficient. In most cases, regardless of the number of elements in the set, the insertion operation takes constant time. This is because an unordered_set is a data structure based on a hash table. It uses a hash function to map elements to buckets and then performs lookup or insertion operations within these buckets, and on average, these operations take constant time.
+However, it's important to note that in extreme cases, when hash collisions (multiple elements mapping to the same bucket) occur, the insertion operation may become somewhat slower due to the need to handle collisions. Nevertheless, due to well-designed hash functions and automatic resizing of the number of buckets, the likelihood of such occurrences is relatively low, and therefore, the average insertion time complexity of unordered_set remains O(1).
 
 # https://leetcode.com/problems/contains-duplicate/
